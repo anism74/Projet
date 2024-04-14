@@ -13,13 +13,13 @@ Objectif:
       
     La première partie est la transformation de Hough classique. Nous prenons une matrice d'image 
     et un pixel de cette matrice. Ensuite, nous appliquons la transformation de Hough sur ce pixel,
-    ce qui nous donne une droite dans l'espace (m, p). Nous répétons cette étape pour un autre point 
+    ce qui nous donne une droite dans l'espace (m, b). Nous répétons cette étape pour un autre point 
     de notre image. Si les deux droites de ces deux points s'intersectent dans l'espace (m, p), cela 
     signifie que ces deux points sont alignés dans l'espace (x, y). Nous répétons ce processus pour 
-    tous les points de l'image et nous récupérons dans l'espace (m, p) les intersections des droites
+    tous les points de l'image et nous récupérons dans l'espace (m, b) les intersections des droites
     des points de (x, y) avec la valeur la plus grande. Enfin, nous traçons les droites sur l'image 
-    à l'aide de l'équation yi = m*xi + p.
-    La deuxième transformation de Hough travaille sur (r, theta) au lieu de (m, p). Elle transforme 
+    à l'aide de l'équation y = m*x + b.
+    La deuxième transformation de Hough travaille sur (r, theta) au lieu de (m, b). Elle transforme 
     chaque point de notre matrice en courbe sinusoïdale, puis les étapes suivantes sont les mêmes que
     celles de la transformation de Hough classique.
 
